@@ -1,0 +1,256 @@
+/* =========================
+   PRICING SECTION
+========================== */
+
+.pricing-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    background:
+        linear-gradient(135deg,
+            #050505 0%,
+            #101820 45%,
+            #0a0a0a 100%);
+
+    overflow: hidden;
+}
+
+/* Accent Background */
+
+.pricing-section::before {
+    content: '';
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: #0077ff10;
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -120px;
+
+    filter: blur(80px);
+}
+
+.pricing-section::after {
+    content: '';
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #ffd00008;
+
+    border-radius: 50%;
+
+    bottom: -100px;
+    left: -100px;
+
+    filter: blur(80px);
+}
+
+/* =========================
+   GRID
+========================== */
+
+.pricing-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 70px;
+}
+
+/* =========================
+   CARD
+========================== */
+
+.pricing-card {
+    position: relative;
+
+    background: #111;
+
+    border-radius: 30px;
+
+    padding: 45px 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition: 0.5s ease;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.pricing-card:hover {
+    transform:
+        translateY(-12px);
+
+    border-color: #0077ff40;
+}
+
+/* =========================
+   FEATURED CARD
+========================== */
+
+.pricing-card.featured {
+    border: 1px solid #0077ff40;
+
+    transform: scale(1.04);
+
+    background:
+        linear-gradient(180deg,
+            rgba(0, 119, 255, 0.08),
+            #111);
+}
+
+.pricing-card.featured:hover {
+    transform:
+        scale(1.04) translateY(-12px);
+}
+
+/* =========================
+   POPULAR TAG
+========================== */
+
+.popular-tag {
+    position: absolute;
+
+    top: 20px;
+    right: -40px;
+
+    background: #ffd000;
+
+    color: #000;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    padding: 8px 45px;
+
+    transform: rotate(35deg);
+}
+
+/* =========================
+   BADGE
+========================== */
+
+.pricing-badge {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    background: #1b1b1b;
+
+    color: #ffd000;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 25px;
+}
+
+.pricing-badge.premium {
+    color: #4da3ff;
+}
+
+.pricing-badge.coating {
+    color: #ffd000;
+}
+
+/* =========================
+   TITLE
+========================== */
+
+.pricing-card h3 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   PRICE
+========================== */
+
+.price {
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    color: #fff;
+
+    margin-bottom: 30px;
+}
+
+/* =========================
+   LIST
+========================== */
+
+.pricing-card ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin-bottom: 35px;
+}
+
+.pricing-card ul li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #bdbdbd;
+}
+
+.pricing-card ul li i {
+    color: #0077ff;
+}
+
+/* =========================
+   BUTTON
+========================== */
+
+.pricing-card .btn-booking {
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .pricing-card.featured:hover {
+        transform:
+            translateY(-12px);
+    }
+
+}

@@ -1,0 +1,173 @@
+/* =========================
+   CONTACT SECTION
+========================== */
+
+.contact-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    background: #050505;
+}
+
+/* =========================
+   WRAPPER
+========================== */
+
+.contact-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 40px;
+
+    margin-top: 70px;
+}
+
+/* =========================
+   CONTACT INFO
+========================== */
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* Card */
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #111;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: 0.4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #0077ff30;
+}
+
+/* Icon */
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg,
+            #0077ff,
+            #0055cc);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+
+    color: #fff;
+
+    flex-shrink: 0;
+}
+
+/* Text */
+
+.contact-card h4 {
+    margin-bottom: 6px;
+
+    font-size: 1.1rem;
+}
+
+.contact-card p {
+    margin: 0;
+
+    color: #9e9e9e;
+}
+
+/* =========================
+   FORM BOX
+========================== */
+
+.contact-form-box {
+    background: #111;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Input */
+
+.custom-input {
+    background: #181818 !important;
+
+    border: none !important;
+
+    border-radius: 18px !important;
+
+    padding: 18px 20px !important;
+
+    color: #fff !important;
+
+    box-shadow: none !important;
+}
+
+.custom-input::placeholder {
+    color: #777;
+}
+
+.custom-input:focus {
+    border: 1px solid #0077ff40 !important;
+
+    background: #1b1b1b !important;
+}
+
+/* Textarea */
+
+textarea.custom-input {
+    resize: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px) {
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .contact-form-box {
+        padding: 25px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+}
